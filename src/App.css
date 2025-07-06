@@ -1,0 +1,240 @@
+/* ========== Glass-style Header ========== */
+.glass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 80px;
+  background-color: rgba(20, 20, 30, 0.55);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  z-index: 1000;
+  transition: top 0.4s ease;
+}
+
+.nav-links .nav-link {
+  color: white;
+  margin-left: 1.5rem;
+  transition: 0.3s;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+  color: #826AED;
+}
+
+
+/* Hide/Show on Scroll */
+.glass-header.hidden {
+  top: -100px;
+}
+.glass-header.visible {
+  top: 20px;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+  color: #826AED;
+  animation: pulseStar 1.8s infinite ease-in-out;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-part1 {
+  color: #826AED;
+  font-weight: 800;
+  font-size: 2rem;
+  animation: glow 2s infinite ease-in-out;
+}
+
+.logo-part2 {
+  color: #ffffff;
+  margin-left: 2px;
+}
+
+/* Navigation Links */
+.nav-links .nav-link {
+  color: white !important;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+  color: #826AED !important;
+}
+
+/* ========== Hero Section ========== */
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-glass {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(130, 106, 237, 0.25);
+  backdrop-filter: blur(12px);
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #cccccc;
+}
+
+/* ========== About Section ========== */
+.about-section {
+  padding: 100px 20px;
+  background-color: #111;
+  color: white;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #826AED;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ========== Body Reset ========== */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: black;
+}
+
+/* ========== Animations ========== */
+@keyframes pulseStar {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #a78bfa;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 12px #caa5ff;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== Responsive Enhancements ========== */
+@media (max-width: 768px) {
+  .glass-header {
+    left: 20px;
+    right: 20px;
+    padding: 0 1rem;
+    height: 70px;
+    border-radius: 12px;
+  }
+
+  .logo-container {
+    font-size: 1.4rem;
+  }
+
+  .logo-part1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    display: none; /* ← يمكنك لاحقًا إضافة زر burger هنا */
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-glass {
+    padding: 25px 15px;
+  }
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .glass-header {
+    left: 10px;
+    right: 10px;
+    padding: 0 1rem;
+  }
+}

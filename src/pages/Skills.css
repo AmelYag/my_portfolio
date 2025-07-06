@@ -1,0 +1,63 @@
+.skills-section {
+  padding: 80px 20px; /* ← مساحة جانبية أفضل على الهاتف */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  flex-direction: column;
+}
+
+.skills-box {
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 700px;
+  animation: fadeIn 1.2s ease forwards;
+  border: 1px solid rgba(130, 106, 237, 0.3);
+}
+
+/* تحسين زر المهارات */
+button.btn-info {
+  font-weight: bold;
+  background-color: #826AED;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(130, 106, 237, 0.3);
+}
+
+button.btn-info:hover {
+  background-color: #6c54da;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(130, 106, 237, 0.5);
+}
+
+/* إضافة تأثير دخول */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* استجابة الهاتف */
+@media (max-width: 768px) {
+  .skills-box {
+    padding: 25px 15px;
+  }
+
+  button.btn-info {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,109 @@
+/* src/components/Header.css */
+
+.glass-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 80px;
+  background-color: rgba(20, 20, 30, 0.55);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+  color: #826AED;
+  animation: pulseStar 1.8s infinite ease-in-out;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo-part1 {
+  color: #826AED;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.logo-part2 {
+  color: white;
+  margin-left: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #826AED;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    flex-direction: column;
+    background: rgba(20, 20, 30, 0.95);
+    backdrop-filter: blur(10px);
+    gap: 1rem;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@keyframes pulseStar {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,103 @@
+.hero-section {
+  min-height: 100vh;
+  background: transparent;
+  padding: 100px 20px;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(130, 106, 237, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.typewriter-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #826AED;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #826AED;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.neon-button {
+  padding: 12px 30px;
+  background: #826AED;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #826AED, 0 0 40px #826AED66, 0 0 80px #826AED33;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.neon-button:hover {
+  background: #6c54da;
+  transform: scale(1.05);
+  box-shadow: 0 0 14px #6c54da, 0 0 50px #6c54da66, 0 0 90px #6c54da33;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Responsive styles for smaller devices */
+@media (max-width: 768px) {
+  .typewriter-text {
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-card {
+    padding: 30px 20px;
+  }
+
+  .neon-button {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+}
