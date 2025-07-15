@@ -16,7 +16,7 @@ const projects = [
     title: "Student Registration System",
     description: "Student management system using PHP and MySQL.",
     image: C,
-    link: "https://student8register.ct.ws/"
+    link: "https://amelyag.github.io/register_student/a.html"
   },
   {
     title: "Portfolio Website",
