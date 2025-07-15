@@ -3,6 +3,7 @@ import "./Projects.css";
 import barirta from "../images/barirta.jpg";
 import C from "../images/C.PNG";
 import p from "../images/p.PNG";
+import U from "../images/u.PNG";
 
 const projects = [
   {
@@ -23,6 +24,13 @@ const projects = [
     image: p,
     link: "#"
   },
+  {
+  title: "Immobilier Website",
+  description: "Un site immobilier moderne avec HTML, CSS, JS, et TypeScript.",
+  image: U, // صورة معاينة للموقع
+  link: "https://AmelYag.github.io/immob/"
+},
+
 ];
 
 const Projects = () => {
